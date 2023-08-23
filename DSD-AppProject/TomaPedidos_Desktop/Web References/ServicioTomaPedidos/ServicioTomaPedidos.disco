@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
-  <contractRef ref="http://localhost:49934/ServicioTomaPedidos.asmx?wsdl" docRef="http://localhost:49934/ServicioTomaPedidos.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <soap address="http://localhost:49934/ServicioTomaPedidos.asmx" xmlns:q1="http://localhost/ServicioTomaPedidos" binding="q1:ServicioTomaPedidosSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-  <soap address="http://localhost:49934/ServicioTomaPedidos.asmx" xmlns:q2="http://localhost/ServicioTomaPedidos" binding="q2:ServicioTomaPedidosSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
-</discovery>
