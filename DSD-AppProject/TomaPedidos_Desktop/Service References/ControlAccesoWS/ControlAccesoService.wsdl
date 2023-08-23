@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ControlAccesoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65423/ControlAccesoService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65423/ControlAccesoService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceControlAcceso.Errores" />
+      <xsd:import schemaLocation="http://localhost:65423/ControlAccesoService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IControlAccesoService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IControlAccesoService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlAccesoService_ValidarAcceso_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarAcceso" />
+  </wsdl:message>
+  <wsdl:message name="IControlAccesoService_ValidarAcceso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarAccesoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlAccesoService_ValidarAcceso_ControlAccesoExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFServiceControlAcceso.Errores" name="detail" element="q1:ControlAccesoException" />
+  </wsdl:message>
+  <wsdl:portType name="IControlAccesoService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlAccesoService/DoWork" message="tns:IControlAccesoService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlAccesoService/DoWorkResponse" message="tns:IControlAccesoService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAcceso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlAccesoService/ValidarAcceso" message="tns:IControlAccesoService_ValidarAcceso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlAccesoService/ValidarAccesoResponse" message="tns:IControlAccesoService_ValidarAcceso_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IControlAccesoService/ValidarAccesoControlAccesoExceptionFault" name="ControlAccesoExceptionFault" message="tns:IControlAccesoService_ValidarAcceso_ControlAccesoExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IControlAccesoService" type="tns:IControlAccesoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IControlAccesoService/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarAcceso">
+      <soap:operation soapAction="http://tempuri.org/IControlAccesoService/ValidarAcceso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ControlAccesoExceptionFault">
+        <soap:fault use="literal" name="ControlAccesoExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ControlAccesoService">
+    <wsdl:port name="BasicHttpBinding_IControlAccesoService" binding="tns:BasicHttpBinding_IControlAccesoService">
+      <soap:address location="http://localhost:65423/ControlAccesoService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

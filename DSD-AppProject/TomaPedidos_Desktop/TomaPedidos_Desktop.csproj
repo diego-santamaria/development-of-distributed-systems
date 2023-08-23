@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{95BE4F3C-1D53-414C-844C-408726DBEDB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TomaPedidos</RootNamespace>
+    <AssemblyName>TomaPedidos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spire.Common, Version=1.10.2.6040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.8.10.2\lib\net40\Spire.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.License, Version=1.3.7.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.8.10.2\lib\net40\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.10.1.2040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.8.10.2\lib\net40\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS, Version=8.10.2.6040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.XLS.8.10.2\lib\net40\Spire.XLS.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bean\Activity.cs" />
+    <Compile Include="Bean\Item.cs" />
+    <Compile Include="Bean\Offer.cs" />
+    <Compile Include="Bean\Opportunity.cs" />
+    <Compile Include="Bean\Order.cs" />
+    <Compile Include="Bean\ParamsComboBox.cs" />
+    <Compile Include="Bean\ParamsItemSelector.cs" />
+    <Compile Include="Commons\Constant.cs" />
+    <Compile Include="Commons\Conversion.cs" />
+    <Compile Include="Commons\MsgBoxUtil.cs" />
+    <Compile Include="Commons\Useful.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ControlAccesoWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OfertaVentaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmActividadesRelacionadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmActividadesRelacionadas.Designer.cs">
+      <DependentUpon>frmActividadesRelacionadas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmActividadRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmActividadRegistro.Designer.cs">
+      <DependentUpon>frmActividadRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmArticuloBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmArticuloBusqueda.Designer.cs">
+      <DependentUpon>frmArticuloBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmClienteBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmClienteBusqueda.Designer.cs">
+      <DependentUpon>frmClienteBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmConversiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmConversiones.Designer.cs">
+      <DependentUpon>frmConversiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmOportunidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmOportunidades.Designer.cs">
+      <DependentUpon>frmOportunidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProforma.Designer.cs">
+      <DependentUpon>frmProforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmClienteRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmClienteRegistro.Designer.cs">
+      <DependentUpon>frmClienteRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmPedidoRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmPedidoRegistro.Designer.cs">
+      <DependentUpon>frmPedidoRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmProformaPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmProformaPreview.Designer.cs">
+      <DependentUpon>frmProformaPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmSelectorArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmSelectorArticulo.Designer.cs">
+      <DependentUpon>frmSelectorArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmServAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmServAdd.Designer.cs">
+      <DependentUpon>frmServAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ServicioTomaPedidos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\frmActividadesRelacionadas.resx">
+      <DependentUpon>frmActividadesRelacionadas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmActividadRegistro.resx">
+      <DependentUpon>frmActividadRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmArticuloBusqueda.resx">
+      <DependentUpon>frmArticuloBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmClienteBusqueda.resx">
+      <DependentUpon>frmClienteBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmConversiones.resx">
+      <DependentUpon>frmConversiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmOportunidades.resx">
+      <DependentUpon>frmOportunidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProforma.resx">
+      <DependentUpon>frmProforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmClienteRegistro.resx">
+      <DependentUpon>frmClienteRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmPedidoRegistro.resx">
+      <DependentUpon>frmPedidoRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmProformaPreview.resx">
+      <DependentUpon>frmProformaPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmSelectorArticulo.resx">
+      <DependentUpon>frmSelectorArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmServAdd.resx">
+      <DependentUpon>frmServAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\PlantillaExcel\ModeloProforma.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Service References\ControlAccesoWS\ControlAccesoService.wsdl" />
+    <None Include="Service References\ControlAccesoWS\ControlAccesoService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ControlAccesoWS\ControlAccesoService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ControlAccesoWS\ControlAccesoService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService.wsdl" />
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OfertaVentaWS\TomaPedidos.OfertaVentaWS.BusinessPartner.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\Activities.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\BusinessPartner.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\Item.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\Opportunity.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ServicioTomaPedidos\ServicioTomaPedidos.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cart_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cached.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_dots_horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_account_key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cached_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cart_plus_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_lock_open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logout_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_logang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_sypsoft360.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_information_outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_presentation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_autorenew_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_autorenew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_file_export.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_content-save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_account-multiple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_account-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_account_multiple-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_keyboard_return.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_bell_plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_autorenew_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_bells.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_handshake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49934/ServicioTomaPedidos.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ServicioTomaPedidos\</RelPath>
+      <UpdateFromURL>http://localhost:49934/ServicioTomaPedidos.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TomaPedidos_ServicioTomaPedidos_ServicioTomaPedidos</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\ServicioTomaPedidos\ServicioTomaPedidos.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ControlAccesoWS\" />
+    <WCFMetadataStorage Include="Service References\OfertaVentaWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OfertaVentaWS\OfertaVentaService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OfertaVentaWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OfertaVentaWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OfertaVentaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ControlAccesoWS\ControlAccesoService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ControlAccesoWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ControlAccesoWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ControlAccesoWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

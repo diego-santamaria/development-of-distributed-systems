@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="OfertaVentaService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:65390/OfertaVentaService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:65390/OfertaVentaService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:65390/OfertaVentaService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Dominio" />
+      <xsd:import schemaLocation="http://localhost:65390/OfertaVentaService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOfertaVentaService_BusquedaClienteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaClienteList" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_BusquedaClienteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaClienteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarCliente_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q1:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarCliente_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q2:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarCliente_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarCliente" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarCliente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarCliente_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q3:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_BusquedaActividadList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaActividadList" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_BusquedaActividadList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaActividadListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarActividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarActividad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarActividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarActividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarActividad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q4:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarActividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarActividad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarActividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarActividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarActividad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q5:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarActividad_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarActividad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarActividad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarActividadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarActividad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q6:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_BusquedaOportunidadList_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaOportunidadList" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_BusquedaOportunidadList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusquedaOportunidadListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarOportunidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarOportunidad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarOportunidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegistrarOportunidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_RegistrarOportunidad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q7:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarOportunidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOportunidad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarOportunidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOportunidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_ActualizarOportunidad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q8:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarOportunidad_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOportunidad" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarOportunidad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarOportunidadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EliminarOportunidad_EntityExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q9:EntityException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarCorreoElectronico_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoElectronico" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarCorreoElectronico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarCorreoElectronicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarCorreoElectronico_NotificationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q10:NotificationException" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarMensajeTexto_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMensajeTexto" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarMensajeTexto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarMensajeTextoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOfertaVentaService_EnviarMensajeTexto_NotificationExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WCFServiceOfertaVenta.Errores" name="detail" element="q11:NotificationException" />
+  </wsdl:message>
+  <wsdl:portType name="IOfertaVentaService">
+    <wsdl:operation name="BusquedaClienteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaClienteList" message="tns:IOfertaVentaService_BusquedaClienteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaClienteListResponse" message="tns:IOfertaVentaService_BusquedaClienteList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarCliente" message="tns:IOfertaVentaService_RegistrarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarClienteResponse" message="tns:IOfertaVentaService_RegistrarCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarClienteEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_RegistrarCliente_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarCliente" message="tns:IOfertaVentaService_ActualizarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarClienteResponse" message="tns:IOfertaVentaService_ActualizarCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarClienteEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_ActualizarCliente_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarCliente" message="tns:IOfertaVentaService_EliminarCliente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarClienteResponse" message="tns:IOfertaVentaService_EliminarCliente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarClienteEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_EliminarCliente_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaActividadList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaActividadList" message="tns:IOfertaVentaService_BusquedaActividadList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaActividadListResponse" message="tns:IOfertaVentaService_BusquedaActividadList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarActividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarActividad" message="tns:IOfertaVentaService_RegistrarActividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarActividadResponse" message="tns:IOfertaVentaService_RegistrarActividad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarActividadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_RegistrarActividad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarActividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarActividad" message="tns:IOfertaVentaService_ActualizarActividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarActividadResponse" message="tns:IOfertaVentaService_ActualizarActividad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarActividadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_ActualizarActividad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarActividad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarActividad" message="tns:IOfertaVentaService_EliminarActividad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarActividadResponse" message="tns:IOfertaVentaService_EliminarActividad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarActividadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_EliminarActividad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaOportunidadList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaOportunidadList" message="tns:IOfertaVentaService_BusquedaOportunidadList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/BusquedaOportunidadListResponse" message="tns:IOfertaVentaService_BusquedaOportunidadList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarOportunidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarOportunidad" message="tns:IOfertaVentaService_RegistrarOportunidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarOportunidadResponse" message="tns:IOfertaVentaService_RegistrarOportunidad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/RegistrarOportunidadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_RegistrarOportunidad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOportunidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarOportunidad" message="tns:IOfertaVentaService_ActualizarOportunidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarOportunidadResponse" message="tns:IOfertaVentaService_ActualizarOportunidad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/ActualizarOportunidadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_ActualizarOportunidad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOportunidad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarOportunidad" message="tns:IOfertaVentaService_EliminarOportunidad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarOportunidadResponse" message="tns:IOfertaVentaService_EliminarOportunidad_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/EliminarOportunidadEntityExceptionFault" name="EntityExceptionFault" message="tns:IOfertaVentaService_EliminarOportunidad_EntityExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoElectronico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarCorreoElectronico" message="tns:IOfertaVentaService_EnviarCorreoElectronico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarCorreoElectronicoResponse" message="tns:IOfertaVentaService_EnviarCorreoElectronico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarCorreoElectronicoNotificationExceptionFault" name="NotificationExceptionFault" message="tns:IOfertaVentaService_EnviarCorreoElectronico_NotificationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajeTexto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarMensajeTexto" message="tns:IOfertaVentaService_EnviarMensajeTexto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarMensajeTextoResponse" message="tns:IOfertaVentaService_EnviarMensajeTexto_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IOfertaVentaService/EnviarMensajeTextoNotificationExceptionFault" name="NotificationExceptionFault" message="tns:IOfertaVentaService_EnviarMensajeTexto_NotificationExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOfertaVentaService" type="tns:IOfertaVentaService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BusquedaClienteList">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/BusquedaClienteList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarCliente">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/RegistrarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCliente">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/ActualizarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarCliente">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/EliminarCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaActividadList">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/BusquedaActividadList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarActividad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/RegistrarActividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarActividad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/ActualizarActividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarActividad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/EliminarActividad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="BusquedaOportunidadList">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/BusquedaOportunidadList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarOportunidad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/RegistrarOportunidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOportunidad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/ActualizarOportunidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarOportunidad">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/EliminarOportunidad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EntityExceptionFault">
+        <soap:fault use="literal" name="EntityExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarCorreoElectronico">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/EnviarCorreoElectronico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NotificationExceptionFault">
+        <soap:fault use="literal" name="NotificationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMensajeTexto">
+      <soap:operation soapAction="http://tempuri.org/IOfertaVentaService/EnviarMensajeTexto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="NotificationExceptionFault">
+        <soap:fault use="literal" name="NotificationExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OfertaVentaService">
+    <wsdl:port name="BasicHttpBinding_IOfertaVentaService" binding="tns:BasicHttpBinding_IOfertaVentaService">
+      <soap:address location="http://localhost:65390/OfertaVentaService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

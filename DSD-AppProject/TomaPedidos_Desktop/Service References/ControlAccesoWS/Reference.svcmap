@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f95febc-8904-4104-8880-d9e4e8d47efe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65423/ControlAccesoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ControlAccesoService.disco" MetadataType="Disco" ID="65633e62-4279-4f10-a994-6c2db271a5f2" SourceId="1" SourceUrl="http://localhost:65423/ControlAccesoService.svc?disco" />
+    <MetadataFile FileName="ControlAccesoService.wsdl" MetadataType="Wsdl" ID="0ca590d8-9ebf-4fce-990e-5d1cd69cf395" SourceId="1" SourceUrl="http://localhost:65423/ControlAccesoService.svc?wsdl" />
+    <MetadataFile FileName="ControlAccesoService.xsd" MetadataType="Schema" ID="45eae2f1-c4d4-4ec5-b353-ffefc5f7b8ce" SourceId="1" SourceUrl="http://localhost:65423/ControlAccesoService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ControlAccesoService1.xsd" MetadataType="Schema" ID="a707436e-bd48-4ac4-bb27-4fc190b8a3fc" SourceId="1" SourceUrl="http://localhost:65423/ControlAccesoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ControlAccesoService2.xsd" MetadataType="Schema" ID="bf19c6f6-4fca-425f-b23c-8a1f77b4a915" SourceId="1" SourceUrl="http://localhost:65423/ControlAccesoService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

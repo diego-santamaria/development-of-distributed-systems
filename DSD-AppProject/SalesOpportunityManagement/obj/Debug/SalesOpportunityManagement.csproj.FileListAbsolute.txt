@@ -1,0 +1,17 @@
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\bin\Debug\SalesOpportunityManagement.exe.config
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\bin\Debug\SalesOpportunityManagement.exe
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\bin\Debug\SalesOpportunityManagement.pdb
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.csproj.AssemblyReference.cache
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.DashboardForm.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.LoginForm.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.Properties.Resources.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.ActivityUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.BaseUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.CustomerUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.HomeUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.OpportUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.UserControls.SalesUserControl.resources
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.csproj.GenerateResource.cache
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.csproj.CoreCompileInputs.cache
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.exe
+\\Mac\Home\Repositories\source\repos\dsantasot\DSD-AppProject\SalesOpportunityManagement\obj\Debug\SalesOpportunityManagement.pdb

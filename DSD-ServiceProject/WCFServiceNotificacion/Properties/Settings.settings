@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WCFServiceNotificacion.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SMSAccountSid" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ACfe7722ce0cc75a30ce8acb0102458ed6</Value>
+    </Setting>
+    <Setting Name="SMSAuthToken" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">8385dd7ff9719f35264a95f1fc471db7</Value>
+    </Setting>
+    <Setting Name="SMSNumberFrom" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+12673858986</Value>
+    </Setting>
+    <Setting Name="EmailApiPublicKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">952c7b36c1998f69b5a0e2470583d43f</Value>
+    </Setting>
+    <Setting Name="EmailApiPrivateKey" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0d3a08b92f9b8601d69979103d38558a</Value>
+    </Setting>
+    <Setting Name="SupportEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">u201815581@upc.edu.pe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

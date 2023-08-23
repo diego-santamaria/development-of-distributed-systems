@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D99F4B52-D1EB-4315-9061-BD7087D2DA89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SalesOpportunityManagement</RootNamespace>
+    <AssemblyName>SalesOpportunityManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>imgapp_min.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commons\Useful.cs" />
+    <Compile Include="Connected Services\OfertaVentaWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\ExceptionType.cs" />
+    <Compile Include="Enums\OperationType.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\BaseUserControl.Designer.cs">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CustomerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CustomerUserControl.Designer.cs">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HomeUserControl.Designer.cs">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\OpportUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\OpportUserControl.Designer.cs">
+      <DependentUpon>OpportUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SalesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SalesUserControl.Designer.cs">
+      <DependentUpon>SalesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ActivityUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ActivityUserControl.Designer.cs">
+      <DependentUpon>ActivityUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\ActivityUserControl.resx">
+      <DependentUpon>ActivityUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\BaseUserControl.resx">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\CustomerUserControl.resx">
+      <DependentUpon>CustomerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HomeUserControl.resx">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\OpportUserControl.resx">
+      <DependentUpon>OpportUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SalesUserControl.resx">
+      <DependentUpon>SalesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService.wsdl" />
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\SalesOpportunityManagement.OfertaVentaWS.Actividad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\SalesOpportunityManagement.OfertaVentaWS.BusinessPartner.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\OfertaVentaWS\SalesOpportunityManagement.OfertaVentaWS.Oportunidad.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgapp_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+    <None Include="Resources\anonymous_user.png" />
+    <None Include="Resources\checked_user.png" />
+    <None Include="Resources\send-email_w.png" />
+    <None Include="Resources\search_w.png" />
+    <None Include="Resources\plus_w.png" />
+    <None Include="Resources\restart_w.png" />
+    <None Include="Resources\pencil_w.png" />
+    <None Include="Resources\trash_w.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\notification_alert.png" />
+    <None Include="Resources\notification_update.png" />
+    <None Include="Resources\notification_find.png" />
+    <None Include="Resources\notification_delete.png" />
+    <None Include="Resources\notification_add.png" />
+    <None Include="Resources\unpin.png" />
+    <None Include="Connected Services\OfertaVentaWS\OfertaVentaService.disco" />
+    <None Include="Connected Services\OfertaVentaWS\configuration91.svcinfo" />
+    <None Include="Connected Services\OfertaVentaWS\configuration.svcinfo" />
+    <None Include="Connected Services\OfertaVentaWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="imgapp_min.ico" />
+    <None Include="Resources\customer_anchor.png" />
+    <None Include="Resources\customer_delete.png" />
+    <None Include="Resources\customer_update.png" />
+    <None Include="Resources\customer_find.png" />
+    <None Include="Resources\customer_add.png" />
+    <None Include="Resources\close_s.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\configuration.png" />
+    <None Include="Resources\users.png" />
+    <None Include="Resources\customer.png" />
+    <None Include="Resources\shopping-cart.png" />
+    <None Include="Resources\handshake.png" />
+    <None Include="Resources\idea.png" />
+    <None Include="Resources\notification.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\OfertaVentaWS\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

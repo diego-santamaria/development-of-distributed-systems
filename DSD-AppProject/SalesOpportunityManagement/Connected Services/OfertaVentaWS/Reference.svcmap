@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="527bdd43-dc59-4458-933f-760781843f99" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:65390/OfertaVentaService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OfertaVentaService.xsd" MetadataType="Schema" ID="f018d566-3351-4861-ba22-9d0963cbfc45" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OfertaVentaService1.xsd" MetadataType="Schema" ID="5b40495c-2b89-4ddd-a447-dfcd62d073b1" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OfertaVentaService2.xsd" MetadataType="Schema" ID="047180e8-a134-4c4f-9cb8-19c1a1e53948" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OfertaVentaService.wsdl" MetadataType="Wsdl" ID="a5537f03-f06d-4ae2-b9dd-735a5be0e646" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?wsdl" />
+    <MetadataFile FileName="OfertaVentaService3.xsd" MetadataType="Schema" ID="23f7d07d-af32-402f-a194-372465a76098" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OfertaVentaService.disco" MetadataType="Disco" ID="62d67300-e32e-4a98-af82-2d87b62feaaf" SourceId="1" SourceUrl="http://localhost:65390/OfertaVentaService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

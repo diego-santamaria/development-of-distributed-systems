@@ -1,0 +1,7 @@
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\bin\WCFServiceOfertaVenta.dll.config
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\bin\WCFServiceOfertaVenta.dll
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\bin\WCFServiceOfertaVenta.pdb
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\obj\Debug\WCFServiceOfertaVenta.csprojAssemblyReference.cache
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\obj\Debug\WCFServiceOfertaVenta.csproj.CoreCompileInputs.cache
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\obj\Debug\WCFServiceOfertaVenta.dll
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServiceOfertaVenta\obj\Debug\WCFServiceOfertaVenta.pdb

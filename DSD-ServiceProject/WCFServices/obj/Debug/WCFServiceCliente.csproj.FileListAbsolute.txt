@@ -1,0 +1,9 @@
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\bin\WCFServiceCliente.dll.config
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\bin\WCFServiceCliente.dll
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\bin\WCFServiceCliente.pdb
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.csprojAssemblyReference.cache
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.Properties.Resources.resources
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.csproj.GenerateResource.cache
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.csproj.CoreCompileInputs.cache
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.dll
+C:\Users\dsant\Source\Repos\DSD-ServiceProject\WCFServices\obj\Debug\WCFServiceCliente.pdb
